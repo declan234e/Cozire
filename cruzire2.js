@@ -1,7 +1,7 @@
 if (typeof Crustulum !== 'undefined') {
     if (Crustulum === null) {
         delete Crustulum;
-    } else throw new Error('Cruzire already loaded.');
+    } else throw new Error('Crustulum already loaded.');
 }
 var Crustulum = {
     OG: {}, // Original Game Data
@@ -10,7 +10,7 @@ var Crustulum = {
             Crustulum.OG.UpdateMenu();
             if (Game.onMenu == 'prefs') {
                 let fragment = document.createDocumentFragment();
-                fragment.appendChild(Crustulum.Menu.heading('Cruzire Toggleables'));
+                fragment.appendChild(Crustulum.Menu.heading('Crustulum Toggleables'));
                 fragment.appendChild(Crustulum.Menu.subheading('Auto Clickers'));
                 fragment.appendChild(Crustulum.Menu.toggleButton('autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
                 fragment.appendChild(Crustulum.Menu.toggleButton('autoGolden','Auto Click Golden Cookies','Clicks any golden cookies for you.'));
@@ -28,7 +28,7 @@ var Crustulum = {
                 fragment.appendChild(Crustulum.Menu.toggleButton('neverWeeds','Never Weed™','Makes it so weeds never spawn on their own. You can still plant them and they still may spread.'));
                 fragment.appendChild(Crustulum.Menu.toggleButton('allGodsActive','Pantheon \'R Us','All Pantheon gods except for Cyclius will be active in slot one.'));
                 fragment.appendChild(Crustulum.Menu.toggleButton('allGodsSlotOne','Power Of The Gods','All Pantheon gods will behave as if they are in slot 1 regardless of which slot they are in.'));
-                fragment.appendChild(Crustulum.Menu.heading('Cruzire Actions'));
+                fragment.appendChild(Crustulum.Menu.heading('Crustulum Actions'));
                 fragment.appendChild(Crustulum.Menu.subheading('Spawning'));
                 fragment.appendChild(Crustulum.Menu.actionButton('spawnGolden','Spawn a Golden Cookie','Spawns a golden cookie.', Crustulum.Actions.spawnGolden));
                 fragment.appendChild(Crustulum.Menu.actionButton('spawnGoldenFrenzy','Spawn a Frenzy Cookie','Spawns a golden cookie that will cause a frenzy.', Crustulum.Actions.spawnGolden));
@@ -44,7 +44,6 @@ var Crustulum = {
                 fragment.appendChild(Crustulum.Menu.actionButton('lockAllSeeds','Lock All Seeds','Locks all the seeds for the Garden except for the starting seed.', Crustulum.Actions.lockAllSeeds));
                 fragment.appendChild(Crustulum.Menu.subheading('Misc'));
                 fragment.appendChild(Crustulum.Menu.actionButton('removeCheatedCookies','Remove Cheat Achievement','Remove \'Cheated cookies taste awful\' achievement', Crustulum.Actions.removeCheatedCookies));
-
 
                 // Unload Crustulum button. Doesn't work if you loaded other add-ons first. We check only for Cookie Monster.
                 if (typeof CM === 'undefined' || Crustulum.cookieMonsterLoaded) fragment.appendChild(Crustulum.Menu.actionButton('unloadCrustulum','Unload Crustulum','Unloads Crustulum and disabled all of it\'s features.', Crustulum.Actions.unloadCrustulum));
